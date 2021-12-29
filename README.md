@@ -39,3 +39,18 @@ func DoSomething[MyGenericType ~int](input MyGenericType) {
 ```
 
 https://go.dev/play/p/IRpD0KIk7YO?v=gotip
+
+## generated code
+
+Let's say we use `any` - does it mean that we gonna have performance impact ? not really. Complier is optimzing generated code of generics to the used scoep. 
+For example we asked for `any` but we have used that function only with strings, generated code will be `2eshape_string_0` only. 
+
+![image](https://user-images.githubusercontent.com/4710984/147643964-511739e8-254e-4c63-a574-7a47d9fc26f9.png)
+
+https://godbolt.org/z/q5MKhTKvs
+
+![image](https://user-images.githubusercontent.com/4710984/147644148-465f6c62-2c67-4d45-9dcc-d307e1fa0c93.png)
+
+https://godbolt.org/z/rbW9K4sjT
+
+
