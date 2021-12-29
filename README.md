@@ -67,7 +67,7 @@ https://go.dev/play/p/McLvq6zy2f-?v=gotip
 
 ## generated code
 
-Let's say we use `any` - does it mean that we gonna have performance impact ? not really. Complier will optimize the generated code like any other code, only used types will be generated. For example we asked for `any` but we have used that function only with strings, generated code will be `2eshape_string_0` only. 
+Let's say we use `any` - does it mean that we gonna have performance impact ? not really. Complier will optimize the generated code like any other code, only used types will be generated. For example we asked for `any` but we have used that function only with strings, generated code will be limited to used  `2eshape_string_0` only. 
 
 ![image](https://user-images.githubusercontent.com/4710984/147643964-511739e8-254e-4c63-a574-7a47d9fc26f9.png)
 
