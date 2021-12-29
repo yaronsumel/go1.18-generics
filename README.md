@@ -40,6 +40,26 @@ func DoSomething[MyGenericType ~int](input MyGenericType) {
 
 https://go.dev/play/p/IRpD0KIk7YO?v=gotip
 
+## compareable 
+
+One problem you can imagine is type comparison, for example that won't work. 
+```go
+func DoSomething[MyGenericType any](x, y MyGenericType) {
+	log.Println(x == y)
+}
+```
+`./prog.go:12:14: invalid operation: cannot compare x == y (operator == not defined on MyGenericType)`
+
+
+Quick and easy way is use bulit in `comparable`.
+```go
+func DoSomething[MyGenericType comparable](x, y MyGenericType) {
+	log.Println(x == y)
+}
+```
+
+https://go.dev/play/p/McLvq6zy2f-?v=gotip
+
 ## generated code
 
 Let's say we use `any` - does it mean that we gonna have performance impact ? not really. Complier will optimize the generated code like any other code, only used types will be generated. For example we asked for `any` but we have used that function only with strings, generated code will be `2eshape_string_0` only. 
