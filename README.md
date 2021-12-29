@@ -1,5 +1,10 @@
 # go1.18-generics
 
+Useful resources 
+1. https://go.dev/blog/go1.18beta1
+1. https://tip.golang.org/doc/go1.18
+1. https://go.dev/doc/tutorial/generics
+
 ### Prerequisites
 An installation of Go 1.18 Beta 1 or later.
 
